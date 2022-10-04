@@ -229,7 +229,7 @@ class DeliveryBody extends StatelessWidget {
           dotHeight: 8,
           dotWidth: 8,
           spacing: 4,
-          dotColor: Colors.white,
+          dotColor: Colors.grey,
         ),
         count: pageViewImage.length);
   }
