@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:worktest/components/components.dart';
 import 'package:worktest/cubit/home_cubit/home_cubit.dart';
 import 'package:worktest/cubit/home_cubit/home_cubit_states.dart';
 
@@ -37,7 +36,7 @@ TextEditingController controller=TextEditingController();
               IconButton(color: Colors.red, onPressed: () {  }, icon: const Icon(Icons.add_road_sharp,size: 40,),),
             ],
           ),
-          body: cubit.navBarList[cubit.navbarCurrentIndex],
+          body: SafeArea(child: cubit.navBarList[cubit.navbarCurrentIndex]),
           bottomNavigationBar: BottomNavigationBar(
             onTap: (index){
               cubit.changeNavBar(index);
